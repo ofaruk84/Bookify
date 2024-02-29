@@ -1,4 +1,5 @@
 ﻿using Bookify.Domain.Abstractions;
+using Bookify.Domain.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,7 @@ namespace Bookify.Domain.Apartments
         public Money Price { get; private set; }
         public Money CleaningFee { get; private set; }
 
+        public DateTime? LastBokkedOnUtc { get; internal set; }
         public List<Amenity> Amenities { get; private set; } = [];
     }
 }
